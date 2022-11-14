@@ -8,6 +8,8 @@ try:
         print("what do you help with?...")
         voice_command = listener.listen(source)
         command = listener.recognize_google(voice_command)
-        print(command)
+        
+        if 'how are you' in command.lower():
+            print('I am fine. Thank you!')
 except:
     pass
